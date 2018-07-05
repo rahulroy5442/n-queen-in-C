@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
-void queen(int,int,int,int[10][10]);
-int check(int,int,int,int[10][10]);
+void queen(int,int,int,int[100][100]);
+int check(int,int,int,int[100][100]);
 int lp=1;
 int main()
 {
-    int n,nm[10][10]={0};
+    int n,nm[100][100]={0};
     printf("Enter board\n");
     scanf("%d",&n);
     queen(n,0,0,nm);
     return 0;
 }
-void queen(int n,int ro,int co,int mat[10][10])
+void queen(int n,int ro,int co,int mat[100][100])
 {
     int i,j;
      if(co==n)
@@ -53,7 +53,7 @@ void queen(int n,int ro,int co,int mat[10][10])
 
     queen(n,ro,co+1,mat);
 }
-int check(int n,int row,int column,int a[10][10])
+int check(int n,int row,int column,int a[100][100])
 {
     int i,j;
 if((row==0 && column==0 )|| (row==0 && column!=0 ))
